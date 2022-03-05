@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anger Dumper - SA & Jaikt</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta5/dist/css/tabler.min.css">
+<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/310/angry-face_1f620.png" type="image/x-icon">
+</head>
+<body>
+<div class="page page-center" style="font-family: 'Poppins', sans-serif;">
+<div class="container-tight">
+<div class="card card-md">
+<div class="card-body">
+<div class="text-center" style="font-size: 35px;">
+Dump Your Anger <img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/smiling-face-with-horns_1f608.png" alt="Anger Dumper" width="30px">
+</div>
+<div class="mt-3 text-center">
+<label class="h2">What are you angry on?</label>
+<input type="text" class="form-control text-center" id="destroy" placeholder="dump your anger here">
+</div>
+<div class="mt-3 text-center">
+<button class="btn btn-outline-danger w-100" onclick="destroy()">Destroy Anger</button>
+</div>
+<div class="mt-3 text-center" style="display:none" id="procedure">
+<p id="result" class="h3"></p>
+<div class="mt-3 text-center">
+<button class="btn btn-outline-success w-100" onClick="window.location.reload();">Try Again</button>
+</div>  
+</div>
+<div class="mt-3 text-center">&copy; SA. All Rights Reserved.</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+        function destroy()
+        {
+        document.getElementById('destroy').readOnly = true;
+        document.getElementById("destroy").value="Anger dumped successfully!";
+        var x = document.getElementById('procedure');
+            if (x.style.display == 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        const steps = [];
+        steps[0]= "Now, Take 20 deep breathes.";
+        steps[1]= "Now, Drink a glass of cold water.";
+        steps[3]= "Now, Count the numbers 1 to 100.";
+        steps[4]= "Now, Wash your face with cold water.";
+        steps[5]= "Now, Think of something that you like the most.";
+        steps[6]= "Now, Take 20 steps backwards.";
+        steps[7]= "Now, Chant Gayathri mantra 21 times.";
+        steps[8]= "Now, Take a small nap.";
+        steps[9]= "Now, Do Japam.";
+        steps[10]= "Now, Stand in front of the mirror.";
+        num= Math.floor(Math.random() * 10)
+        document.getElementById("result").innerHTML = steps[num];
+        }
+        </script>
+</body>
+</html>
